@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -50,8 +51,8 @@ fun PerguntasScreen( modifier: Modifier ){
 
         Card(
             modifier = Modifier
-                .fillMaxWidth()
-                .height(60.dp),
+                .height(60.dp)
+                .width(400.dp),
             colors = CardDefaults.cardColors(
                 containerColor = Color(0xFF89D4A6)
             ),
@@ -68,81 +69,110 @@ fun PerguntasScreen( modifier: Modifier ){
                 color = Color(0xFF000000)
             )
         }
-        Spacer(modifier = Modifier.height(13.dp))
+        Spacer(modifier = Modifier.height(30.dp))
 
-        Card(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(400.dp),
-            colors = CardDefaults.cardColors(
-                containerColor = Color(0xFFFFFFFF)
-            )
-        ) {
-            Text(
-                text = "Quem escreveu a obra 'Futuro Ancestral' ?",
-                fontSize = 20.sp,
-                fontWeight = FontWeight.Normal,
-                color = Color(0xFF000000)
-            )
-            Button(
+            Card(
                 modifier = Modifier
-                    .width(300.dp)
-                    .height(48.dp),
-                onClick = {
-
-                },
-                border = BorderStroke(2.dp, Color.Gray),
-                colors = ButtonDefaults.buttonColors(
-                    Color(0xFFFFFFFF)
+                    .fillMaxWidth()
+                    .height(400.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color(0xFFFFFFFF)
                 )
             ) {
+                Column(
+                    modifier = Modifier.fillMaxSize().padding(20.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+
+                ) {
                 Text(
-                    text = "Eliane Potiguara",
-                    color = Color(0xFF000000)
+                    text = "Quem escreveu a obra 'Futuro Ancestral' ?",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Normal,
+                    color = Color(0xFF000000),
+                    textAlign = TextAlign.Center
                 )
+                Spacer(modifier = Modifier.height(20.dp))
 
-            }
+                Button(
+                    modifier = Modifier
+                        .width(300.dp)
+                        .height(48.dp),
+                    onClick = {
 
-            Button(
-                modifier = Modifier
-                    .width(300.dp)
-                    .height(48.dp),
-                onClick = {
+                    },
+                    border = BorderStroke(1.dp, Color.Gray),
+                    colors = ButtonDefaults.buttonColors(
+                        Color(0xFFFFFFFF)
+                    ),
+                    shape = RoundedCornerShape(10.dp)
+                ) {
+                    Text(
+                        text = "Eliane Potiguara",
+                        color = Color(0xFF000000)
+                    )
 
                 }
-            ) {
-                Text(
-                    text = "Conceição Evaristo"
-                )
-            }
-            Button(
-                modifier = Modifier
-                    .width(300.dp)
-                    .height(48.dp),
-                onClick = {
+                Spacer(modifier = Modifier.height(20.dp))
 
+                Button(
+                    modifier = Modifier
+                        .width(300.dp)
+                        .height(48.dp),
+                    onClick = {
+
+                    },
+                    border = BorderStroke(1.dp, Color.Gray),
+                    colors = ButtonDefaults.buttonColors(
+                        Color(0xFFFFFFFF)
+                    ),
+                    shape = RoundedCornerShape(10.dp)
+                ) {
+                    Text(
+                        text = "Conceição Evaristo",
+                        color = Color(0xFF000000)
+                    )
                 }
-            ) {
-                Text(
-                    text = "Darcy Ribeiro"
-                )
-            }
-            Button(
-                modifier = Modifier
-                    .width(300.dp)
-                    .height(48.dp),
-                onClick = {
+                Spacer(modifier = Modifier.height(20.dp))
 
+                Button(
+                    modifier = Modifier
+                        .width(300.dp)
+                        .height(48.dp),
+                    onClick = {
+
+                    },
+                    border = BorderStroke(1.dp, Color.Gray),
+                    colors = ButtonDefaults.buttonColors(
+                        Color(0xFFFFFFFF)
+                    ),
+                    shape = RoundedCornerShape(10.dp)
+                ) {
+                    Text(
+                        text = "Darcy Ribeiro",
+                        color = Color(0xFF000000)
+                    )
                 }
-            ) {
-                Text(
-                    text = "Ailton Krenak"
-                )
+                    Spacer(modifier = Modifier.height(20.dp))
+
+                Button(
+                    modifier = Modifier
+                        .width(300.dp)
+                        .height(48.dp),
+                    onClick = {
+
+                    },
+                    border = BorderStroke(1.dp,Color.Gray),
+                    colors = ButtonDefaults.buttonColors(
+                        Color(0xFFFFFFFF)
+                    ),
+                    shape = RoundedCornerShape(10.dp)
+                ) {
+                    Text(
+                        text = "Ailton Krenak",
+                        color = Color(0xFF000000)
+                    )
+                }
             }
-
-
-
-
         }
     }
 }
